@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<!-- Defines the document type as HTML5 -->
+
+<html>
+<!-- Root element of the HTML document -->
+
+<head>
+<!-- Contains metadata and links for the document -->
+
+<title>HTML Tags Demo</title>
+<!-- Sets the title shown in the browser tab -->
+
+<meta charset="UTF-8">
+<!-- Provides metadata about character encoding -->
+
+<link rel="stylesheet" href="">
+<!-- Links external resources like CSS -->
+
+<style>
+/* Adds internal CSS styling */
+body{
+font-family: Arial;
+}
+</style>
+
+<script>
+/* Embeds JavaScript code */
+function showMsg(){
+alert("Button clicked");
+}
+</script>
+
+<base href="https://example.com/">
+<!-- Sets the base URL for relative links -->
+
+</head>
+
+<body>
+<!-- Contains all visible webpage content -->
+
+<header>
+<!-- Represents introductory content of the page -->
+
+<h1>HTML Tag Demonstration</h1>
+<!-- Heading level 1 (largest heading) -->
+
+<nav>
+<!-- Section containing navigation links -->
+
+<a href="#">Home</a>
+<!-- Anchor tag creates hyperlinks -->
+
+<a href="#">About</a>
+
+</nav>
+
+</header>
+
+<main>
+<!-- Represents the main content of the page -->
+
+<section>
+<!-- Defines a standalone section of content -->
+
+<h2>Text Formatting</h2>
+
+<p>
+<!-- Paragraph tag for text -->
+
+This is <b>bold</b>
+<!-- Makes text bold without extra importance -->
+
+and <strong>important</strong>
+<!-- Indicates important text (usually bold) -->
+
+and <i>italic</i>
+<!-- Displays text in italic style -->
+
+and <u>underlined</u>
+<!-- Underlines text -->
+
+</p>
+
+<p><small>Small text</small></p>
+<!-- Displays smaller text -->
+
+<p><mark>Highlighted text</mark></p>
+<!-- Highlights text -->
+
+<p>Water formula H<sub>2</sub>O</p>
+<!-- Subscript text -->
+
+<p>x<sup>2</sup></p>
+<!-- Superscript text -->
+
+<p><s>Incorrect text</s></p>
+<!-- Marks text as no longer correct -->
+
+<p><del>Deleted</del> and <ins>Inserted</ins></p>
+<!-- Deleted and inserted text -->
+
+<p><abbr title="World Health Organization">WHO</abbr></p>
+<!-- Defines abbreviation with tooltip -->
+
+<p>Keyboard input: <kbd>Ctrl + C</kbd></p>
+<!-- Indicates keyboard input -->
+
+<p>Variable: <var>x</var></p>
+<!-- Represents a variable -->
+
+<p>Sample output: <samp>Hello World</samp></p>
+<!-- Displays sample computer output -->
+
+</section>
+
+<section>
+
+<h2>Lists</h2>
+
+<ul>
+<!-- Unordered list -->
+
+<li>Item 1</li>
+<!-- List item -->
+
+<li>Item 2</li>
+
+</ul>
+
+<ol>
+<!-- Ordered list -->
+
+<li>First</li>
+<li>Second</li>
+
+</ol>
+
+<dl>
+<!-- Description list -->
+
+<dt>HTML</dt>
+<!-- Term in description list -->
+
+<dd>HyperText Markup Language</dd>
+<!-- Description of the term -->
+
+</dl>
+
+</section>
+
+<section>
+
+<h2>Quotes</h2>
+
+<blockquote>
+<!-- Used for long quotations -->
+
+This is a long quotation example.
+
+</blockquote>
+
+<p>Short quote: <q>Hello</q></p>
+<!-- Inline short quotation -->
+
+<cite>Book Title</cite>
+<!-- Indicates title of a work -->
+
+</section>
+
+<section>
+
+<h2>Image and Figure</h2>
+
+<figure>
+<!-- Self-contained content like images -->
+
+<img src="https://via.placeholder.com/150">
+<!-- Displays an image -->
+
+<figcaption>Sample Image</figcaption>
+<!-- Caption for the figure -->
+
+</figure>
+
+</section>
+
+<section>
+
+<h2>Forms</h2>
+
+<form>
+<!-- Defines a form to collect user input -->
+
+<fieldset>
+<!-- Groups related form elements -->
+
+<legend>User Form</legend>
+<!-- Title of the fieldset -->
+
+<label>Name:</label>
+<!-- Label for input field -->
+
+<input type="text">
+<!-- Input control -->
+
+<br>
+<!-- Line break -->
+
+<label>Choose Language</label>
+
+<input list="langs">
+
+<datalist id="langs">
+<!-- Provides autocomplete options -->
+
+<option value="HTML">
+<option value="CSS">
+<option value="JavaScript">
+
+</datalist>
+
+<meter value="0.6">
+<!-- Displays a measurement value -->
+</meter>
+
+<progress value="70" max="100">
+<!-- Shows progress of a task -->
+</progress>
+
+<button onclick="showMsg()">
+<!-- Clickable button -->
+Click Me
+</button>
+
+</fieldset>
+
+</form>
+
+</section>
+
+<section>
+
+<h2>Table</h2>
+
+<table border="1">
+<!-- Creates a table -->
+
+<caption>Student Table</caption>
+<!-- Caption for table -->
+
+<thead>
+<!-- Table header group -->
+
+<tr>
+<!-- Table row -->
+
+<th>Name</th>
+<!-- Table header cell -->
+
+<th>Marks</th>
+
+</tr>
+</thead>
+
+<tbody>
+<!-- Table body -->
+
+<tr>
+
+<td>John</td>
+<!-- Table data cell -->
+
+<td>90</td>
+
+</tr>
+
+</tbody>
+
+<tfoot>
+<!-- Table footer -->
+
+<tr>
+<td>Total</td>
+<td>90</td>
+</tr>
+
+</tfoot>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Audio and Video</h2>
+
+<audio controls>
+<!-- Embeds audio player -->
+
+<source src="sample.mp3" type="audio/mpeg">
+<!-- Defines media source -->
+
+</audio>
+
+<br>
+
+<video width="320" controls>
+<!-- Embeds video player -->
+
+<source src="sample.mp4" type="video/mp4">
+
+<track kind="subtitles">
+<!-- Text track for subtitles -->
+
+</video>
+
+</section>
+
+<section>
+
+<h2>Canvas</h2>
+
+<canvas width="200" height="100">
+<!-- Drawable area for graphics -->
+</canvas>
+
+</section>
+
+<section>
+
+<h2>Details</h2>
+
+<details>
+<!-- Expandable section -->
+
+<summary>Click to expand</summary>
+<!-- Summary heading for details -->
+
+<p>Hidden information</p>
+
+</details>
+
+</section>
+
+<section>
+
+<h2>IFrame</h2>
+
+<iframe src="https://example.com" width="300" height="200">
+<!-- Embeds another webpage -->
+</iframe>
+
+</section>
+
+<section>
+
+<h2>SVG Graphics</h2>
+
+<svg width="100" height="100">
+<!-- Scalable Vector Graphics container -->
+
+<circle cx="50" cy="50" r="40" stroke="black" fill="red"/>
+
+</svg>
+
+</section>
+
+<section>
+
+<h2>Miscellaneous</h2>
+
+<span>Inline container</span>
+<!-- Generic inline container -->
+
+<time datetime="2026-03-16">
+<!-- Represents date or time -->
+March 16
+</time>
+
+<wbr>
+<!-- Suggests a word break opportunity -->
+
+</section>
+
+</main>
+
+<footer>
+<!-- Footer section -->
+
+<address>
+<!-- Contact information -->
+Contact: example@email.com
+</address>
+
+</footer>
+
+</body>
+
+</html>
