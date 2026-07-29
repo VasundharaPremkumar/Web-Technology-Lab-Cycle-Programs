@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<title>Registration Form Validation</title> 
+<style> 
+body{ 
+background-color:lightblue; 
+} 
+div{ 
+max-width:400px; 
+border: 3px solid black; 
+padding:20px; 
+background-color:white; 
+margin:auto; 
+} 
+h2{ 
+color:green; 
+text-align:center; 
+} 
+</style> 
+<script> 
+function validateForm() 
+{ 
+var userid = document.getElementById("userid").value; 
+var name = document.getElementById("name").value; 
+var password = document.getElementById("password").value; 
+var email = document.getElementById("email").value; 
+/* User ID Validation */ 
+if(userid.length < 5 || userid.length > 12) 
+    { 
+        alert("User ID must be between 5 and 12 characters"); 
+        return; 
+    } 
+ 
+    /* Name Validation */ 
+    var namePattern = /^[A-Za-z ]+$/; 
+ 
+    if(!name.match(namePattern) || name.length < 15) 
+    { 
+        alert("Name should contain only alphabets and minimum 15 characters"); 
+        return; 
+    } 
+ 
+    /* Password Validation */ 
+    var passPattern = /^(?=.*[A-Z])(?=.*[\W]).{8,}$/; 
+ 
+    if(!password.match(passPattern)) 
+    { 
+        alert("Password must contain at least 8 characters, one uppercase letter and one special character"); 
+        return; 
+    } 
+ 
+    /* Email Validation */ 
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+ 
+    if(!email.match(emailPattern)) 
+    { 
+        alert("Invalid Email Address"); 
+        return; 
+    } 
+ 
+alert("Registration Successful"); 
+} 
+</script> 
+</head> 
+<body> 
+<h2>Registration Form</h2> 
+<div> 
+<form> 
+User ID: 
+<input type="text" id="userid" /> 
+<br/><br/> 
+Name: 
+<input type="text" id="name" /> 
+<br/><br/> 
+Password: 
+<input type="password" id="password" /> 
+<br/><br/> 
+E-mail: 
+<input type="text" id="email" /> 
+<br/><br/> 
+<input type="button" 
+value="Register" 
+onclick="validateForm()" /> 
+</form> 
+</div> 
+</body> 
+</html> 

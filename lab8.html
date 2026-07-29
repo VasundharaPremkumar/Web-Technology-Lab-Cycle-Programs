@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<title>Average Marks Calculator</title> 
+<style> 
+body{ 
+background-color:pink; 
+} 
+h2{ 
+text-align:center; 
+} 
+div{ 
+max-width:400px; 
+margin:auto; 
+padding:20px; 
+background-color:white; 
+border:1px solid black; 
+} 
+</style> 
+<script> 
+function calculateAverage() 
+{ 
+    var regno = document.getElementById("regno").value; 
+    var subcode = document.getElementById("subcode").value; 
+    var t1 = parseInt(document.getElementById("t1").value); 
+    var t2 = parseInt(document.getElementById("t2").value); 
+    var t3 = parseInt(document.getElementById("t3").value); 
+    /* Validation */ 
+    if(regno == "" || subcode == "" || 
+    isNaN(t1) || isNaN(t2) || isNaN(t3)) 
+    { 
+        alert("Please fill all fields"); 
+        return; 
+    } 
+    /* Find best two test marks */ 
+    var total = t1 + t2 + t3; 
+    var min = Math.min(t1, t2, t3); 
+    var average = (total - min) / 2; 
+    alert("Average of Best Two Tests = " + average); 
+} 
+</script> 
+</head> 
+<body> 
+ 
+<h2>Student Marks Form</h2> 
+<div> 
+<form> 
+    Register Number: 
+    <input type="text" id="regno" /> 
+    <br/><br/> 
+ 
+    Subject Code: 
+    <input type="text" id="subcode" /> 
+    <br/><br/> 
+ 
+    Test 1 Marks: 
+    <input type="text" id="t1" /> 
+    <br/><br/> 
+ 
+    Test 2 Marks: 
+    <input type="text" id="t2" /> 
+    <br/><br/> 
+ 
+    Test 3 Marks: 
+    <input type="text" id="t3" /> 
+    <br/><br/> 
+ 
+    <input type="button" 
+           value="Calculate Average" 
+           onclick="calculateAverage()" /> 
+</form> 
+</div> 
+</body> 
+</html>

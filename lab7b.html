@@ -1,0 +1,75 @@
+<!-- //Collect user info then validate whether all the fields
+ are filled or not then display the all details together -->
+ <!DOCTYPE html> 
+<html> 
+<head> 
+<title>Form Validation</title> 
+<style> 
+body{ 
+font-family: Arial; 
+background-color: lightblue; 
+} 
+form{ 
+    width: 350px; 
+    margin: auto; 
+    padding: 20px; 
+    background-color: white; 
+} 
+</style> 
+ 
+<script> 
+function validateForm() 
+{ 
+    var name = document.getElementById("name").value; 
+    var email = document.getElementById("email").value; 
+    var mobile = document.getElementById("mobile").value; 
+    var color = document.getElementById("color").value; 
+ 
+    var gender = ""; 
+    var g = document.getElementsByName("gender"); 
+ 
+    for(var i=0; i<g.length; i++) 
+    { 
+        if(g[i].checked) 
+        { 
+            gender = g[i].value; 
+        } 
+    } 
+ 
+    if(name=="" || email=="" || mobile=="" || gender=="") 
+    { 
+        alert("Please fill all fields"); 
+        return; 
+    } 
+ 
+document.getElementById("output").value = 
+"Name: " + name + 
+"\nEmail: " + email + 
+"\nMobile: " + mobile + 
+"\nGender: " + gender + 
+"\nFavorite Color: " + color; 
+} 
+</script> 
+</head> 
+<body> 
+<form> 
+<h2 align="center">Registration Form</h2> 
+Name: 
+<input type="text" id="name"><br><br> 
+Email: 
+<input type="text" id="email"><br><br> 
+Mobile No: 
+<input type="text" id="mobile"><br><br> 
+Gender: 
+<input type="radio" name="gender" value="Male">Male 
+<input type="radio" name="gender" value="Female">Female 
+<br><br> 
+Favorite Color: 
+<input type="color" id="color"> 
+<br><br> 
+<input type="button" value="Submit" onclick="validateForm()"> 
+<br><br> 
+<textarea id="output" rows="6" cols="35"></textarea> 
+</form> 
+</body> 
+</html>

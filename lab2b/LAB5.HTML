@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Demo</title>
+<style>
+.FONT1{
+font-family:"Times New Roman";
+}
+.FONT2{
+font-family:Arial;
+}
+.FONT3{
+font-family:Verdana;
+}
+.FONT4{
+font-family:"Lucida Calligraphy";
+}
+.repeat{
+width:300px;
+height:150px;
+background-image:linear-gradient(45deg,pink,purple);
+background-size:40px 40px;
+border:1px solid black;
+}
+.repeatx{
+background-repeat:repeat-x;
+}
+.repeaty{
+background-repeat:repeat-y;
+}
+.repeatall{
+background-repeat:repeat;
+}
+.norepeat{
+background-repeat:no-repeat;
+}
+a:link{
+color:blue;
+}
+a:hover{
+color:red;
+}
+a:active{
+color:green;
+}
+.hidden{
+visibility:hidden;
+}
+.visible{
+visibility:visible;
+}
+</style>
+</head>
+<body>
+<h1>FONT STYLES</h1>
+<h2 class="FONT1">Times New Roman</h2>
+<h2 class="FONT2">Arial</h2>
+<h2 class="FONT3">Verdana</h2>
+<h2 class="FONT4">Lucida Calligraphy</h2>
+<hr>
+<h1>BACKGROUND REPEAT</h1>
+<div class="repeat repeatx"></div>
+<br>
+<div class="repeat repeaty"></div>
+<br>
+<div class="repeat repeatall"></div>
+<br>
+<div class="repeat norepeat"></div>
+<hr>
+<h1>LINK STYLE</h1>
+<a href="#">Click Here</a>
+<hr>
+<h1>ELEMENT VISIBILITY</h1>
+<h2 class="hidden">This text is Hidden</h2>
+<h2 class="visible">This text is Visible</h2>
+</body>
+</html>

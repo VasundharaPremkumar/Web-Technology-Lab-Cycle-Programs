@@ -1,0 +1,91 @@
+<!-- a) Create a form to collect Student feedback. (Use textbox, text area,
+checkbox, radio button, select box etc.). -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Feedback Form</title>
+
+<style>
+body{font-family:Arial;background-color:lightseagreen;}
+form{width:600px;margin:auto;background:white;padding:20px;border-radius:10px;}
+h2{text-align:center;}
+</style>
+
+</head>
+
+<body>
+
+    
+    <form>
+    <h2>Student Feedback Form</h2>
+
+Name : <input type="text" placeholder="Enter your name"><br><br>
+
+USN : <input type="text" placeholder="Enter USN"><br><br>
+
+Gender :
+<input type="radio" name="g">Male
+<input type="radio" name="g">Female
+<br><br>
+
+Semester :
+<select>
+<option>Select</option>
+<option>1</option><option>2</option>
+<option>3</option><option>4</option>
+<option>5</option><option>6</option>
+<option>7</option><option>8</option>
+</select>
+
+<br><br>
+
+Subjects Liked :
+
+<input type="checkbox">Web Technology
+<input type="checkbox">DBMS
+<input type="checkbox">Java
+<input type="checkbox">Python
+
+<br><br>
+
+Rating :
+
+<select>
+<option>Excellent</option>
+<option>Good</option>
+<option>Average</option>
+<option>Poor</option>
+</select>
+
+<br><br>
+
+Suggestions :<br>
+
+<textarea rows="5" cols="40"></textarea>
+
+<br><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+
+</form>
+
+</body>
+</html>
+
+
+<!-- 
+Summary of the whole code:
+title-title of the website
+body - background color defines what we must have for the whole website
+ and it follows hierarchy
+ form- width-box size,backgroundcolor defines its color,
+ border-radius:10px andre curve the edges
+Name and usn will have input type as text where we will enter some things 
+and later the placeholder contains what must be viisble in the text box anta
+gender is choosing one so radio type
+sem must be selected so use select and options are the choosen options
+checkboxes for fav subjects
+next for the rating again keep select and options
+next at last for suggestions textarea tag and rows and cols
+  -->
